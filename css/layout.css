@@ -1,17 +1,31 @@
 :root {
     --gap: 20px;
+    --sg: calc(var(--s1) + var(--gap));
     --s1: calc((100% - 11 * var(--gap)) / 12);
-    --s2: calc(var(--s1) + var(--gap) + var(--s1));
-    --s3: calc(var(--s2) + var(--gap) + var(--s1));
-    --s4: calc(var(--s3) + var(--gap) + var(--s1));
-    --s5: calc(var(--s4) + var(--gap) + var(--s1));
-    --s6: calc(var(--s5) + var(--gap) + var(--s1));
-    --s7: calc(var(--s6) + var(--gap) + var(--s1));
-    --s8: calc(var(--s7) + var(--gap) + var(--s1));
-    --s9: calc(var(--s8) + var(--gap) + var(--s1));
-    --s10: calc(var(--s9) + var(--gap) + var(--s1));
-    --s11: calc(var(--s10) + var(--gap) + var(--s1));
-    --s12: calc(var(--s11) + var(--gap) + var(--s1));
+    --s2: calc(var(--s1) + var(--sg));
+    --s3: calc(var(--s2) + var(--sg));
+    --s4: calc(var(--s3) + var(--sg));
+    --s5: calc(var(--s4) + var(--sg));
+    --s6: calc(var(--s5) + var(--sg));
+    --s7: calc(var(--s6) + var(--sg));
+    --s8: calc(var(--s7) + var(--sg));
+    --s9: calc(var(--s8) + var(--sg));
+    --s10: calc(var(--s9) + var(--sg));
+    --s11: calc(var(--s10) + var(--sg));
+    --s12: calc(var(--s11) + var(--sg));
+
+    --m1: calc(var(--gap) + var(--sg));
+    --m2: calc(var(--m1) + var(--sg));
+    --m3: calc(var(--m2) + var(--sg));
+    --m4: calc(var(--m3) + var(--sg));
+    --m5: calc(var(--m4) + var(--sg));
+    --m6: calc(var(--m5) + var(--sg));
+    --m7: calc(var(--m6) + var(--sg));
+    --m8: calc(var(--m7) + var(--sg));
+    --m9: calc(var(--m8) + var(--sg));
+    --m10: calc(var(--m9) + var(--sg));
+    --m11: calc(var(--m10) + var(--sg));
+    --m12: calc(var(--m11) + var(--sg));
 }
 .container {
     display: inline-block;
@@ -26,8 +40,8 @@
     }
         .container > .row > * {
             display: inline-block;
+            min-height: 1px;
             float: left;
-            background-color: yellow;
         }
         .container > .row > * + * {
             margin-left: var(--gap);
@@ -45,6 +59,32 @@
         .container > .row > .col-11 { width: var(--s11); }
         .container > .row > .col-12 { width: var(--s12); }
 
+        .container > .row > .m-l-1 { margin-left: var(--m1); }
+        .container > .row > .m-l-2 { margin-left: var(--m2); }
+        .container > .row > .m-l-3 { margin-left: var(--m3); }
+        .container > .row > .m-l-4 { margin-left: var(--m4); }
+        .container > .row > .m-l-5 { margin-left: var(--m5); }
+        .container > .row > .m-l-6 { margin-left: var(--m6); }
+        .container > .row > .m-l-7 { margin-left: var(--m7); }
+        .container > .row > .m-l-8 { margin-left: var(--m8); }
+        .container > .row > .m-l-9 { margin-left: var(--m9); }
+        .container > .row > .m-l-10 { margin-left: var(--m10); }
+        .container > .row > .m-l-11 { margin-left: var(--m11); }
+        .container > .row > .m-l-12 { margin-left: var(--m12); }
+
+        .container > .row > .m-r-1 { margin-right: calc(var(--m1) - var(--gap)); }
+        .container > .row > .m-r-2 { margin-right: calc(var(--m2) - var(--gap)); }
+        .container > .row > .m-r-3 { margin-right: calc(var(--m3) - var(--gap)); }
+        .container > .row > .m-r-4 { margin-right: calc(var(--m4) - var(--gap)); }
+        .container > .row > .m-r-5 { margin-right: calc(var(--m5) - var(--gap)); }
+        .container > .row > .m-r-6 { margin-right: calc(var(--m6) - var(--gap)); }
+        .container > .row > .m-r-7 { margin-right: calc(var(--m7) - var(--gap)); }
+        .container > .row > .m-r-8 { margin-right: calc(var(--m8) - var(--gap)); }
+        .container > .row > .m-r-9 { margin-right: calc(var(--m9) - var(--gap)); }
+        .container > .row > .m-r-10 { margin-right: calc(var(--m10) - var(--gap)); }
+        .container > .row > .m-r-11 { margin-right: calc(var(--m11) - var(--gap)); }
+        .container > .row > .m-r-12 { margin-right: calc(var(--m12) - var(--gap)); }
+
 @media ( max-width: 1300px ) {
     .container > .row {
         width: 1000px;
@@ -58,6 +98,9 @@
     }
 }
 @media ( max-width: 768px ) {
+    :root {
+        --gap: 10px;
+    }
     .container > .row {
         width: 100%;
         margin: 0;
