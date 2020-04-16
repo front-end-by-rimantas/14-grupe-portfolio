@@ -1,0 +1,47 @@
+.cards {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 5px 20px #999;
+    border-radius: 6px;
+}
+    .cards > * {
+        display: inline-block;
+        width: 100%;
+    }
+    .cards > .fa {
+        width: 100px;
+        font-size: 36px;
+        line-height: 100px;
+        background-color: var(--light-main-color);
+        border: 2px solid var(--main-color);
+        border-radius: 50%;
+        animation: wave 2s linear 0s infinite;
+        box-shadow: -4px 0 var(--light-main-color), -4px 0 #fff inset;
+    }
+    .cards > .number {
+        font-size: 44px;
+        line-height: 50px;
+    }
+    .cards > h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+@keyframes wave {
+    0% {
+        border-radius: 30% 40% 50% 30%;
+    }
+    25% {
+        border-radius: 40% 35% 45% 20%;
+    }
+    50% {
+        border-radius: 50% 40% 40% 40%;
+    }
+    75% {
+        border-radius: 40% 35% 45% 25%;
+    }
+    100% {
+        border-radius: 30% 40% 50% 30%;
+    }
+}
