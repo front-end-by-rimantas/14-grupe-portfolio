@@ -1,0 +1,8 @@
+#about_me .btn {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+#about_me img {
+    width: 100%;
+}

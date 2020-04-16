@@ -1,9 +1,12 @@
+@import './variables.css';
+@import './font-awesome.min.css';
 @import './reset.css';
+@import './layout.css';
+@import './button.css';
 @import './common.css';
 @import './header.css';
 @import './hero.css';
 @import './clients.css';
-@import './about-me.css';
 @import './cards.css';
 @import './progress-bar.css';
 @import './works-gallery.css';
@@ -11,3 +14,4 @@
 @import './testimonials.css';
 @import './contact-me.css';
 @import './footer.css';
+@import './custom.css';
