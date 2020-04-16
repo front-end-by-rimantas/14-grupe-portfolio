@@ -18,7 +18,7 @@ class Achievements {
         for ( let i=0; i<data.length; i++ ) {
             const ach = data[i];
             HTML += `
-                <div class="col-3 achievement">
+                <div class="col-3 cards">
                     <i class="fa fa-${ach.icon}"></i>
                     <div class="number">${ach.number}</div>
                     <h4>${ach.title}</h4>
