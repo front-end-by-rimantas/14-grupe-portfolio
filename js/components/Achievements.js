@@ -1,5 +1,5 @@
 "use strict";
-import data from './data/achievements-data.js';
+import data from '../data/achievements-data.js';
 
 class Achievements {
     constructor( target ) {
