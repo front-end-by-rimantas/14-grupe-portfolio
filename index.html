@@ -12,13 +12,19 @@
     <header class="container">
         <div class="row">
             <div class="col-12">
-                LOGO + NAV
+                <img src="./img/logo.png" alt="Logo">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <nav></nav>
             </div>
         </div>
     </header>
 
     <!-- HERO -->
-    <div class="container bg-main">
+    <div id="home" class="container bg-main" data-menu="Home">
         <div class="row">
             <div class="col-12">
                 <div class="btn bg-red t-white b-red h-bg-white h-t-red h-b-red">Resume</div>
@@ -36,7 +42,7 @@
     </div>
 
     <!-- ABOUT ME -->
-    <div id="about_me" class="container">
+    <div id="about_me" class="container" data-menu="About">
         <div class="row">
             <div class="col-5 m-r-2">
                 <img src="./img/about-me/about-me.png" alt="About me photo">
@@ -56,7 +62,7 @@
     </div>
 
     <!-- SKILLS -->
-    <div class="container">
+    <div id="skills" class="container" data-menu="Skills">
         <div class="row">
             <div class="col-5" data-h2="I got the skills" data-h2-line="false">
                 TEXT
@@ -68,7 +74,7 @@
     </div>
 
     <!-- WORKS GALLERY -->
-    <div id="works" class="container bg-light">
+    <div id="works" class="container bg-light" data-menu="Works">
         <div class="row">
             <div class="col-12" data-h2="Latest works"></div>
         </div>
@@ -85,7 +91,7 @@
     </div>
 
     <!-- JOB HISTORY -->
-    <div class="container">
+    <div id="history" class="container" data-menu="History">
         <div class="row">
             <div class="col-12" data-h2="Job history">
                 h2
@@ -116,7 +122,7 @@
     </div>
 
     <!-- SERVICES -->
-    <div class="container bg-light">
+    <div id="services" class="container bg-light" data-menu="Services">
         <div class="row">
             <div class="col-12" data-h2="Service offers">
                 h2
@@ -143,6 +149,8 @@
         </div>
     </div>
 
+    <div class="container" data-menu="Blog" data-menu-url="http://www.google.com" data-menu-target></div>
+
     <!-- TESTIMONIALS -->
     <div class="container">
         <div class="row">
@@ -153,7 +161,7 @@
     </div>
 
     <!-- CONTACT ME -->
-    <div class="container bg-secondary">
+    <div id="contact" class="container bg-secondary" data-menu="Contact">
         <div class="row">
             <div class="col-12" data-h2="Contact me" data-h2-align="center" data-h2-color="white">
                 h2 contact me
