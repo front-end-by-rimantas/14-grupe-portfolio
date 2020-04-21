@@ -1,7 +1,15 @@
 "use strict";
+import Header from './components/Header.js';
 import SectionHeading from './components/SectionHeading.js';
 import Achievements from './components/Achievements.js';
 import Gallery from './components/Gallery.js';
+
+new Header('header nav');
+
+const DOMhamburger = document.querySelector('.hamburger');
+DOMhamburger.addEventListener('click', () => {
+    document.querySelector('header nav').classList.toggle('show');
+})
 
 // find all attr with 'data-h2' to create H2 elements
 const allDataH2 = document.querySelectorAll('[data-h2]');
