@@ -3,6 +3,7 @@ import Header from './components/Header.js';
 import SectionHeading from './components/SectionHeading.js';
 import Achievements from './components/Achievements.js';
 import Gallery from './components/Gallery.js';
+import Skills from './components/Skills.js';
 
 new Header('header nav');
 
@@ -18,5 +19,7 @@ for ( let i=0; i<allDataH2.length; i++ ) {
 }
 
 new Achievements('#achievements > .row');
+
+new Skills('#skills .col-7');
 
 new Gallery('#works > .row:nth-child(3) > .col-12');
