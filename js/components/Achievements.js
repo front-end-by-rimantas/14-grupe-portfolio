@@ -38,19 +38,18 @@ class Achievements {
             if ( height < window.scrollY && !this.numbersAnimated ) {
                 const totalTime = 3000;
                 const framesPerSecond = 24;
-                const framePeriod = 1000 / framesPerSecond;
-                let count = 1;
-                const frameCount = count * framePeriod;
+                const framesCount = (totalTime / 1000) * framesPerSecond;
+                let count = 0;
                 
                 const clock = setInterval(() => {
                     for ( let i=0; i<this.DOMnumbers.length; i++ ) {
-                        this.DOMnumbers[i].innerText = count * parseInt(this.DOMnumbers[i].dataset.num) / frameCount;
+                        this.DOMnumbers[i].innerText = Math.ceil(count * parseInt(this.DOMnumbers[i].dataset.num) / framesCount);
                     }
                     count++;
-                    if ( count > totalTime / framesPerSecond ) {
+                    if ( count > framesCount ) {
                         clearInterval(clock);
                     }
-                }, framePeriod);
+                }, 1000 / framesPerSecond);
 
                 this.numbersAnimated = true;
             }
